@@ -12,9 +12,8 @@ class Product {
 // Winkelmandje class
 class Winkelmandje {
   constructor() {
-    this.items = JSON.parse(localStorage.getItem("winkelmandje"));
+    this.items = JSON.parse(localStorage.getItem("winkelmandje")) || [];
   }
-
   
   voegToe(product) {
     if (!product) return;
@@ -67,9 +66,9 @@ class Winkelmandje {
 
 // sample data
 let producten = [
-  new Product(1, "Beta rr 50", 4000, "file:///C:/Users/ArneHermans/OneDrive%20-%20WICO%20vzw/Bureaublad/winkel%20ICT/beta%20rr%2050.webp"),
-  new Product(2, "H2R", 60000, "file:///C:/Users/ArneHermans/OneDrive%20-%20WICO%20vzw/Bureaublad/winkel%20ICT/H2R.jpg"),
-  new Product(3, "BMW S1K", 25000, "file:///C:/Users/ArneHermans/OneDrive%20-%20WICO%20vzw/Bureaublad/winkel%20ICT/s1krr.jpg")
+  new Product(1, "Beta rr 50", 4000, "beta rr 50.webp"),
+  new Product(2, "H2R", 60000, "H2R.jpg"),
+  new Product(3, "BMW S1K", 25000, "s1krr.jpg")
 ];
 
 
