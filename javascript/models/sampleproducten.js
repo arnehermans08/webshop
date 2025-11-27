@@ -4,21 +4,21 @@ export class Sampledata {
             {
                 Id: 1,
                 naam: 'Beta rr 50',
-                prijs: 4000,
+                prijs: 3595.00,
                 afbeelding: "afbeeldingen/betarr50.webp",
             },
 
             {
                 Id: 2,
-                naam: 'H2R',
-                prijs: 6000,
+                naam: 'Kawasaki H2R',
+                prijs: 56400.01,
                 afbeelding: "afbeeldingen/H2R.jpg",
             },
 
             {
                 Id: 3,
-                naam: 'BMW',
-                prijs: 25000,
+                naam: 'BMW s1krr',
+                prijs: 24800.00,
                 afbeelding: "afbeeldingen/s1krr.jpg",
             }
 

@@ -36,18 +36,19 @@ export class Winkelmandje {
     }
 
     let totaal = 0;
-    let html = "<ul>";
+    let html = "";
 
     this.items.forEach((p, i) => {
       totaal += p.prijs;
       html += `
-        <li>
-          ${p.naam} - €${p.prijs.toFixed(2)}
-          <button onclick="window.winkelmandje.verwijder(${i})">Verwijder</button>
-        </li>`;
+        <div class="winkelrij">
+          <img class="mandjefoto" src="${p.afbeelding}"> 
+          <h3> ${p.naam} - €${p.prijs.toFixed(2)} </h3>
+          <button class="verwijderknop" data-id="${i}">🗑️</button>
+        </div>`;
     });
 
-    html += `</ul><p><strong>Totaal: €${totaal.toFixed(2)}</strong></p>`;
+    html += `<p id="totaal"><strong>Totaal: €${totaal.toFixed(2)}</strong></p>`;
     container.innerHTML = html;
   }
 }
